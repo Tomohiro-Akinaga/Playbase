@@ -7,5 +7,5 @@ interface Props {
 
 export default function TabBarIcon({ title, focused }: Props) {
   if (focused) return <Text>focused!!!!</Text>;
-  return <Text>{title}</Text>;
+  return <Text className="size-full">{title}</Text>;
 }
