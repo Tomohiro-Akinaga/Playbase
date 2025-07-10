@@ -1,6 +1,9 @@
 import { Text, View } from "react-native";
+import { useGames } from "@/hooks/useGames";
 
 export default function Index() {
+  const { games } = useGames();
+
   return (
     <View
       style={{
