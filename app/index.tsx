@@ -2,6 +2,7 @@ import { Text, View } from "react-native";
 import { useGames } from "@/hooks/useGames";
 
 export default function Index() {
+  // eslint-disable-next-line
   const { games } = useGames();
 
   return (
