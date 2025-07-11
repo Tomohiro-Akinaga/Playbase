@@ -10,8 +10,8 @@ export default function TabsLayout() {
           height: 52,
         },
         tabBarStyle: {
-          backgroundColor: "red",
-          opacity: 0.7,
+          backgroundColor: "#767676",
+          borderColor: "#767676",
           borderRadius: 50,
           marginHorizontal: 20,
           marginBottom: 36,
@@ -20,7 +20,6 @@ export default function TabsLayout() {
           overflow: "hidden",
         },
         tabBarIconStyle: {
-          backgroundColor: "blue",
           width: "50%",
           height: "100%",
         },
@@ -31,7 +30,7 @@ export default function TabsLayout() {
         options={{
           title: "index",
           headerShown: false,
-          tabBarIcon: ({ focused }) => <TabBarIcon title="Home" focused={focused} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon icon="home" focused={focused} />,
         }}
       />
       <Tabs.Screen
@@ -39,7 +38,7 @@ export default function TabsLayout() {
         options={{
           title: "Search",
           headerShown: false,
-          tabBarIcon: ({ focused }) => <TabBarIcon title="Search" focused={focused} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon icon="search" focused={focused} />,
         }}
       />
     </Tabs>

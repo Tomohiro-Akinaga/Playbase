@@ -1,12 +1,18 @@
-import { Text } from "react-native";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { View } from "react-native";
 import "../../app/global.css";
 
 interface Props {
-  title: string;
+  icon: any;
   focused: boolean;
 }
 
-export default function TabBarIcon({ title, focused }: Props) {
-  if (focused) return <Text>focused!!!!</Text>;
-  return <Text className="text-red-600">{title}</Text>;
+export default function TabBarIcon({ icon, focused }: Props) {
+  const color = focused ? "#fff" : "rgba(255, 255, 255, 0.4)";
+
+  return (
+    <View>
+      <Ionicons name={icon} color={color} size={24} />
+    </View>
+  );
 }
