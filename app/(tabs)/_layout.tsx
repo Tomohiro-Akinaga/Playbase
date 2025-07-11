@@ -1,5 +1,4 @@
 import { Tabs } from "expo-router";
-import TabBarIcon from "../../components/TabBar/TabBarIcon";
 
 export default function TabsLayout() {
   return (
@@ -7,19 +6,22 @@ export default function TabsLayout() {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarItemStyle: {
-          // width: "100%",
-          // height: "100%",
-          // justifyContent: "center",
-          // alignItems: "center",
+          backgroundColor: "red",
+          height: 52,
         },
         tabBarStyle: {
-          // backgroundColor: "#202020",
-          // borderRadius: 50,
-          // marginHorizontal: 20,
-          // marginBottom: 36,
-          // height: 52,
-          // position: "absolute",
-          // overflow: "hidden",
+          backgroundColor: "#fff",
+          opacity: 0.7,
+          borderRadius: 50,
+          marginHorizontal: 20,
+          marginBottom: 36,
+          height: 52,
+          position: "absolute",
+          overflow: "hidden",
+        },
+        tabBarIconStyle: {
+          backgroundColor: "blue",
+          height: "100%",
         },
       }}
     >
@@ -28,7 +30,11 @@ export default function TabsLayout() {
         options={{
           title: "index",
           headerShown: false,
-          tabBarIcon: ({ focused }) => <TabBarIcon title="Home" focused={focused} />,
+          // tabBarIcon: ({ focused }) => (
+          //   <View className="bg-purple-500 h-[52px]">
+          //     <Text>Home</Text>
+          //   </View>
+          // ),
         }}
       />
       <Tabs.Screen
@@ -36,7 +42,11 @@ export default function TabsLayout() {
         options={{
           title: "Search",
           headerShown: false,
-          tabBarIcon: ({ focused }) => <TabBarIcon title="Search" focused={focused} />,
+          // tabBarIcon: ({ focused }) => (
+          //   <View className="bg-purple-500 h-[52px]">
+          //     <Text>Search</Text>
+          //   </View>
+          // ),
         }}
       />
     </Tabs>

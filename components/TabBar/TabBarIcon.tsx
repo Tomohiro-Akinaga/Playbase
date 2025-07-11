@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import "../../app/global.css";
 
 interface Props {
@@ -8,5 +8,9 @@ interface Props {
 
 export default function TabBarIcon({ title, focused }: Props) {
   if (focused) return <Text>focused!!!!</Text>;
-  return <Text className="text-red-500">{title}</Text>;
+  return (
+    <View className="size-full">
+      <Text className="text-red-600 size-full">{title}</Text>
+    </View>
+  );
 }
