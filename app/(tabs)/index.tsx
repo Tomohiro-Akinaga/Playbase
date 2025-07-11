@@ -3,8 +3,8 @@ import "../global.css";
 
 export default function Home() {
   return (
-    <View className="flex-1 bg-primary">
-      <Text className="text-white">hogeです！！！！！</Text>
+    <View className="flex flex-1 items-center justify-center bg-primary">
+      <Text className="text-white">Home</Text>
     </View>
   );
 }
